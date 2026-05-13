@@ -1,0 +1,31 @@
+---
+import { site } from '../../config/site';
+
+const navLinks = [
+  { label: 'Sobre mí', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Proyectos', href: '#projects' },
+  { label: 'Experiencia', href: '#experience' },
+  { label: 'Contacto', href: '#contact' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-neutral-950/80 backdrop-blur-sm border-b border-neutral-800">
+  <nav class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="text-sm font-semibold tracking-wide text-neutral-100 hover:text-white transition-colors">
+      {site.name}
+    </a>
+    <ul class="flex items-center gap-6">
+      {navLinks.map(({ label, href }) => (
+        <li>
+          <a
+            href={href}
+            class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors"
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
