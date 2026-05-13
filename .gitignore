@@ -18,11 +18,13 @@ yarn-error.log*
 
 # OS / Editor
 .DS_Store
-.vscode/*
-!.vscode/extensions.json
+.vscode/
 
 # Project planning docs (contain personal data — keep private)
 docs/
+CLAUDE.md
 
 # Misc
 *.tsbuildinfo
+
+
