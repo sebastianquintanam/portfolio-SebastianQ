@@ -1,0 +1,63 @@
+---
+const highlights = [
+  { label: 'Location', value: 'Bogotá, Colombia — open to remote, hybrid or on-site' },
+  { label: 'Languages', value: 'Spanish (native) · English C1 · French B1' },
+  { label: 'Degree', value: 'Systems Engineering, Universidad ean (6th semester)' },
+  { label: 'Certification', value: 'AWS Certified Cloud Practitioner' },
+];
+---
+
+<section id="about" class="py-20 border-t border-neutral-800 scroll-mt-20">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <p class="text-xs text-neutral-500 uppercase tracking-widest mb-3">About</p>
+    <h2 class="text-2xl font-bold text-neutral-100 mb-12">The path that brought me here</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+      <div class="lg:col-span-2 space-y-5 text-neutral-400 leading-relaxed">
+        <p>
+          My path into software engineering started somewhere unexpected. Before code, I built a
+          technical foundation through a degree in Occupational Safety and Health Administration —
+          work that required structured thinking, attention to systems, and a methodical approach to
+          complex problems. In 2018, I decided to invest in my future and moved to Melbourne,
+          Australia for two years, studying at Greenwich College and Focus Language School. That
+          experience went beyond language — it shaped how I communicate, think internationally, and
+          work under pressure.
+        </p>
+        <p>
+          When I returned to Colombia, I committed fully to software. Through the Misión TIC program
+          at Universidad Tecnológica de Pereira in 2022, I built my first solid foundation in
+          full-stack development. That same year I joined UColtis as a Full Stack Developer,
+          contributing to EdTech applications built on Java 11, Spring Boot, Python, Django and Flask
+          — integrating backend services with REST APIs and working across MySQL and MongoDB
+          databases. I enrolled in Systems Engineering at Universidad ean shortly after, and I've
+          been combining formal study with professional work ever since.
+        </p>
+        <p>
+          From early 2024 to early 2025, I worked as a Backend Developer at J Create, a
+          Tokyo-based company working across metal manufacturing, architectural products and
+          construction solutions, fully remote. There I focused on database optimization, backend
+          architecture, and building a custom CRM that streamlined internal workflows for sales and
+          support teams. Today I'm in my 6th semester, cloud-certified on both AWS and Google Cloud,
+          and focused on building reliable backend systems — APIs, microservices, and cloud
+          infrastructure. I'm looking for opportunities where I can contribute real technical work
+          and grow within a team with clear engineering standards.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-xs text-neutral-500 uppercase tracking-widest mb-4">Details</p>
+        <ul class="space-y-4">
+          {highlights.map(({ label, value }) => (
+            <li>
+              <p class="text-xs text-neutral-600 mb-0.5">{label}</p>
+              <p class="text-sm text-neutral-300">{value}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>

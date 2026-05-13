@@ -1,0 +1,51 @@
+---
+import { experiences } from '../../data/experience';
+---
+
+<section id="experience" class="py-20 border-t border-neutral-800 scroll-mt-20">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <p class="text-xs text-neutral-500 uppercase tracking-widest mb-3">Experience</p>
+    <h2 class="text-2xl font-bold text-neutral-100 mb-12">Professional Experience</h2>
+
+    <div class="space-y-12">
+      {experiences.map((exp) => (
+        <div class="flex flex-col md:flex-row gap-4 md:gap-10">
+
+          <!-- Date + location -->
+          <div class="shrink-0 md:w-36 md:text-right text-xs text-neutral-500 leading-relaxed">
+            <p class="text-neutral-400 font-medium">{exp.period}</p>
+            <p class="mt-0.5">{exp.location}</p>
+          </div>
+
+          <!-- Content -->
+          <div class="relative md:border-l md:border-neutral-800 md:pl-8 flex-1 min-w-0">
+            <span class="hidden md:block absolute -left-[4px] top-[6px] w-2 h-2 rounded-full bg-neutral-700 ring-2 ring-neutral-950" />
+
+            <p class="text-xs text-neutral-500 mb-0.5">{exp.role}</p>
+            <h3 class="text-base font-semibold text-neutral-100 mb-5">{exp.company}</h3>
+
+            <ul class="space-y-3 mb-6">
+              {exp.bullets.map((bullet) => (
+                <li class="flex gap-3 text-sm text-neutral-400 leading-relaxed">
+                  <span class="text-neutral-600 shrink-0 select-none mt-px">—</span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="flex flex-wrap gap-2">
+              {exp.tags.map((tag) => (
+                <span class="text-xs text-neutral-500 bg-neutral-900 border border-neutral-800 px-2.5 py-0.5 rounded-md">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

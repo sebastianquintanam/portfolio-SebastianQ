@@ -2,11 +2,11 @@
 import { site } from '../../config/site';
 
 const navLinks = [
-  { label: 'Sobre mí', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Proyectos', href: '#projects' },
-  { label: 'Experiencia', href: '#experience' },
-  { label: 'Contacto', href: '#contact' },
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills', mobileHidden: true },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Experience', href: '#experience', mobileHidden: true },
+  { label: 'Contact', href: '#contact' },
 ];
 ---
 
@@ -16,8 +16,8 @@ const navLinks = [
       {site.name}
     </a>
     <ul class="flex items-center gap-6">
-      {navLinks.map(({ label, href }) => (
-        <li>
+      {navLinks.map(({ label, href, mobileHidden }) => (
+        <li class:list={[mobileHidden && 'hidden sm:list-item']}>
           <a
             href={href}
             class="text-sm text-neutral-400 hover:text-neutral-100 transition-colors"
