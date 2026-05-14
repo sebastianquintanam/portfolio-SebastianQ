@@ -2,22 +2,25 @@
 import { site } from '../../config/site';
 ---
 
-<section id="hero" class="pt-32 pb-20 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(255,255,255,0.04),transparent)]">
+<section id="hero" class="hero-section pt-32 pb-20">
   <div class="max-w-5xl mx-auto px-6">
 
-    <p class="text-sm text-neutral-500 mb-6 tracking-wide">
+    <p class="hero-fade-up text-sm text-neutral-500 mb-6 tracking-wide" style="animation-delay: 0.1s">
       {site.location}
     </p>
 
-    <h1 class="text-4xl sm:text-5xl font-bold bg-gradient-to-br from-white to-neutral-400 bg-clip-text text-transparent leading-tight mb-4 max-w-3xl">
+    <h1
+      class="hero-fade-up text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-br from-white via-neutral-100 to-neutral-400 bg-clip-text text-transparent leading-tight mb-4 max-w-3xl"
+      style="animation-delay: 0.3s"
+    >
       {site.role}
     </h1>
 
-    <p class="text-lg text-neutral-400 leading-relaxed max-w-2xl mb-10">
+    <p class="hero-fade-up text-lg text-neutral-400 leading-relaxed max-w-2xl mb-10" style="animation-delay: 0.55s">
       {site.heroDescription}
     </p>
 
-    <div class="flex flex-wrap gap-3 mb-12">
+    <div class="hero-fade-up flex flex-wrap gap-3 mb-12" style="animation-delay: 0.75s">
       <a
         href="#projects"
         class="px-5 py-2.5 bg-neutral-100 text-neutral-900 text-sm font-medium rounded-md hover:bg-white hover:shadow-lg hover:shadow-white/10 transition-all duration-200"
@@ -32,7 +35,7 @@ import { site } from '../../config/site';
       </a>
     </div>
 
-    <div>
+    <div class="hero-fade-up" style="animation-delay: 0.95s">
       <p class="text-xs text-neutral-500 uppercase tracking-widest mb-3">Stack</p>
       <div class="flex flex-wrap gap-2">
         {site.coreStack.map((tech) => (

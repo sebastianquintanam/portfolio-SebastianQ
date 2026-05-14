@@ -20,11 +20,12 @@ yarn-error.log*
 .DS_Store
 .vscode/
 
-# Project planning docs (contain personal data — keep private)
-docs/
-CLAUDE.md
+# Claude Code — local settings only (skills/ and project config are tracked)
+.claude/settings.local.json
+
+# Private docs (personal data, not for repo)
+docs/private/
+docs/personal/
 
 # Misc
 *.tsbuildinfo
-
-

@@ -11,10 +11,8 @@ const { title, type, description, tags, link, isBuilding, inProgress } = project
 
 <article
   class:list={[
-    'group flex flex-col gap-4 rounded-xl p-6 bg-neutral-900 ring-1 ring-white/[0.05] ring-inset hover:-translate-y-0.5 transition-all duration-200',
-    isBuilding
-      ? 'border border-dashed border-neutral-700 hover:border-neutral-500'
-      : 'border border-neutral-800 hover:border-neutral-700',
+    'project-card group flex flex-col gap-4 rounded-xl p-6 bg-neutral-900 ring-1 ring-white/[0.05] ring-inset hover:-translate-y-0.5 transition-all duration-200',
+    'border border-neutral-800 hover:border-neutral-700',
   ]}
 >
   <div class="flex items-center gap-2">

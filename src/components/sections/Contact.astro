@@ -23,18 +23,37 @@ const links = [
 <section id="contact" class="py-24 border-t border-neutral-800 scroll-mt-20">
   <div class="max-w-5xl mx-auto px-6">
 
-    <p class="text-xs text-neutral-500 uppercase tracking-widest mb-4">Contact</p>
+    <div class="flex items-center gap-2.5 mb-10">
+      <span
+        class="w-1.5 h-1.5 rounded-full bg-emerald-500 motion-safe:animate-pulse shrink-0"
+        aria-hidden="true"
+      ></span>
+      <span class="text-sm text-neutral-400">Open to opportunities</span>
+    </div>
 
-    <h2 class="text-3xl sm:text-4xl font-bold text-neutral-100 leading-tight mb-6 max-w-xl">
-      Let's build something reliable.
+    <h2 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-br from-white via-neutral-100 to-neutral-400 bg-clip-text text-transparent leading-tight mb-6 max-w-3xl">
+      Still building reliable systems.
     </h2>
 
-    <p class="text-neutral-400 leading-relaxed max-w-xl mb-10">
-      I'm open to software engineering, backend development, cloud and cybersecurity-related
-      opportunities where I can contribute real technical work and keep growing with a team that values clear engineering standards.
+    <p class="text-base sm:text-lg text-neutral-400 leading-relaxed max-w-xl mb-10">
+      Backend systems, REST APIs, cloud infrastructure and security-aware architecture.
+      Open to backend, cloud and software engineering opportunities.
     </p>
 
     <div class="flex flex-wrap gap-3 mb-8">
+      <a
+        href="/sebastian-quintana-cv.pdf"
+        download
+        class="flex items-center gap-2 px-5 py-3 bg-neutral-100 text-neutral-900 text-sm font-medium rounded-lg hover:bg-white hover:shadow-lg hover:shadow-white/10 transition-all duration-200"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Download CV
+      </a>
+
       {links.map(({ label, href, svg }) => (
         <a
           href={href}

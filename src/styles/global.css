@@ -2,6 +2,7 @@
 
 :root {
   --font-sans: 'Inter', system-ui, sans-serif;
+  --accent: rgba(103, 232, 249, 1);
 }
 
 html {
@@ -10,4 +11,119 @@ html {
 
 body {
   font-family: var(--font-sans);
+}
+
+/* ---- Hero background ---- */
+.hero-section {
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(255, 255, 255, 0.06) 0%, transparent 70%),
+    radial-gradient(rgba(103, 232, 249, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px;
+}
+
+@media (max-width: 639px) {
+  .hero-section {
+    background-image:
+      radial-gradient(ellipse 120% 40% at 50% -5%, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  }
+}
+
+/* ---- Hero animation keyframes ---- */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+
+/* ---- Hero animation classes ---- */
+.hero-fade-up {
+  opacity: 0;
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ---- Reduced motion: disable hero animations ---- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---- Project card border tracer ---- */
+@property --trace-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes projectCardTrace {
+  to { --trace-angle: 360deg; }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card:hover {
+    background:
+      linear-gradient(rgb(23 23 23), rgb(23 23 23)) padding-box,
+      conic-gradient(
+        from var(--trace-angle),
+        rgba(255, 255, 255, 0.07),
+        rgba(255, 255, 255, 0.07) 162deg,
+        rgba(103, 232, 249, 0.35) 170deg,
+        rgba(210, 248, 255, 0.90) 180deg,
+        rgba(103, 232, 249, 0.35) 190deg,
+        rgba(255, 255, 255, 0.07) 198deg,
+        rgba(255, 255, 255, 0.07)
+      ) border-box;
+    border-color: transparent;
+    animation: projectCardTrace 3s linear infinite;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+  .project-card:hover {
+    border-color: rgba(103, 232, 249, 0.2);
+  }
+}
+
+/* ---- Skill card hover glow ---- */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .skill-card:hover {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 4px 16px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ---- Icon skill card border tracer ---- */
+@property --skill-trace-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes skillCardTrace {
+  to { --skill-trace-angle: 360deg; }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .icon-skill-card:hover {
+    background:
+      linear-gradient(rgb(23 23 23), rgb(23 23 23)) padding-box,
+      conic-gradient(
+        from var(--skill-trace-angle),
+        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.06) 168deg,
+        rgba(103, 232, 249, 0.25) 174deg,
+        rgba(200, 240, 255, 0.72) 180deg,
+        rgba(103, 232, 249, 0.25) 186deg,
+        rgba(255, 255, 255, 0.06) 192deg,
+        rgba(255, 255, 255, 0.06)
+      ) border-box;
+    border-color: transparent;
+    animation: skillCardTrace 2.5s linear infinite;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+  .icon-skill-card:hover {
+    border-color: rgba(103, 232, 249, 0.15);
+  }
 }

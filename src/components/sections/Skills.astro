@@ -12,10 +12,10 @@ import { skills } from '../../data/skills';
       {skills.map(({ category, skills: items }) => (
         <div>
           <p class="text-xs text-neutral-500 uppercase tracking-widest mb-4">{category}</p>
-          <div class="flex flex-wrap gap-3">
+          <div class="flex flex-wrap items-start gap-3">
             {items.map((skill) =>
               skill.icon ? (
-                <div class="group flex flex-col items-center gap-2 w-20 sm:w-24 bg-neutral-900 border border-neutral-800 rounded-xl p-3 hover:border-neutral-600 hover:-translate-y-0.5 transition-all duration-200 cursor-default">
+                <div class="skill-card icon-skill-card group flex flex-col items-center gap-2 w-20 sm:w-24 bg-neutral-900 border border-neutral-800 rounded-xl p-3 hover:border-neutral-600 hover:-translate-y-0.5 transition-all duration-300 cursor-default">
                   <img
                     src={skill.icon}
                     alt={skill.name}
@@ -31,7 +31,7 @@ import { skills } from '../../data/skills';
                   </span>
                 </div>
               ) : (
-                <div class="group flex items-center bg-neutral-900 border border-neutral-800 rounded-md px-3 py-1.5 hover:border-neutral-600 transition-all duration-200 cursor-default">
+                <div class="skill-card group flex items-center bg-neutral-900 border border-neutral-800 rounded-md px-3 py-1.5 hover:border-neutral-600 transition-all duration-300 cursor-default">
                   <span class="text-xs text-neutral-500 group-hover:text-neutral-300 transition-colors duration-200">
                     {skill.name}
                   </span>
