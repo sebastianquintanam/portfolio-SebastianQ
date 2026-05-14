@@ -9,8 +9,7 @@ export const site = {
   url: 'https://sebastianquintanam.vercel.app',
   ogImage: '/og-image.png',
   description:
-    'Backend-focused Software Engineer and Systems Engineering student based in Bogotá, Colombia. ' +
-    'Experienced with Java, Spring Boot, Python, Django, REST APIs, MySQL, MongoDB, AWS and Google Cloud.',
+    'Backend-focused Software Engineer. Java · Spring Boot · Python · Django · Cloud · APIs. Bogotá, Colombia.',
   heroDescription:
     'Systems Engineering student with 2+ years of professional experience building backend systems, ' +
     'REST APIs and cloud infrastructure. Open to software engineering, backend and cloud opportunities.',
