@@ -53,5 +53,21 @@ const pageTitle = title === site.siteTitle ? title : `${title} | ${site.name}`;
   </head>
   <body class="bg-neutral-950 text-neutral-100 min-h-screen">
     <slot />
+    <script>
+      document.addEventListener('click', (e) => {
+        const anchor = (e.target as Element).closest('a[href^="#"]') as HTMLAnchorElement | null;
+        if (!anchor) return;
+        const hash = anchor.getAttribute('href');
+        if (!hash) return;
+        const id = hash.slice(1);
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (!target) return;
+        e.preventDefault();
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        target.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+        history.pushState(null, '', hash);
+      });
+    </script>
   </body>
 </html>
