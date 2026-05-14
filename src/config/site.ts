@@ -6,7 +6,8 @@ export const site = {
   email: 'sebastian.quintana.m@gmail.com',
   linkedin: 'https://www.linkedin.com/in/sebastianquintanam/',
   github: 'https://github.com/sebastianquintanam',
-  url: 'https://sebastianquintanam.vercel.app', 
+  url: 'https://sebastianquintanam.vercel.app',
+  ogImage: '/og-image.png',
   description:
     'Backend-focused Software Engineer and Systems Engineering student based in Bogotá, Colombia. ' +
     'Experienced with Java, Spring Boot, Python, Django, REST APIs, MySQL, MongoDB, AWS and Google Cloud.',
