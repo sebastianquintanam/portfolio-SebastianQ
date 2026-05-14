@@ -83,7 +83,7 @@ body {
 .location {
   font-size: 14px;
   font-weight: 400;
-  color: #4a4a4a;
+  color: #606060;
   letter-spacing: 0.05em;
 }
 
@@ -107,7 +107,7 @@ body {
 .role {
   font-size: 30px;
   font-weight: 400;
-  color: #6b6b6b;
+  color: #909090;
   letter-spacing: -0.3px;
   margin-bottom: 44px;
 }
@@ -121,14 +121,14 @@ body {
 .stack-item {
   font-size: 18px;
   font-weight: 400;
-  color: #4a4a4a;
+  color: #6e6e6e;
   white-space: nowrap;
 }
 
 .stack-sep {
   font-size: 14px;
   color: #67e8f9;
-  opacity: 0.4;
+  opacity: 0.55;
   margin: 0 14px;
 }
 
@@ -136,7 +136,7 @@ body {
 .url {
   font-size: 14px;
   font-weight: 400;
-  color: #383838;
+  color: #5c5c5c;
   letter-spacing: 0.04em;
 }
 </style>
